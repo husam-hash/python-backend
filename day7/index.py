@@ -1,9 +1,7 @@
 class Car:
-    # Class variable (shared among all instances)
     wheels = 4
 
     def __init__(self, brand, model, year, color):
-        # Instance variables (unique to each instance)
         self.brand = brand
         self.model = model
         self.year = year
@@ -22,7 +20,6 @@ class Car:
         print(f"{self.year} {self.color} {self.brand} {self.model}, Wheels: {Car.wheels}")
 
 
-# Creating and using car objects
 car1 = Car("Toyota", "Corolla", 2020, "Red")
 car2 = Car("Honda", "Civic", 2022, "Blue")
 

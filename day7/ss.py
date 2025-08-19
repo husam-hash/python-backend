@@ -1,4 +1,3 @@
-# Book class
 class Book:
     def __init__(self, title, author):
         self.title = title
@@ -10,7 +9,6 @@ class Book:
         return f"'{self.title}' by {self.author} - {status}"
 
 
-# Library class
 class Library:
     def __init__(self, name):
         self.name = name
@@ -59,7 +57,6 @@ class Library:
                 print(f"  - {book}")
 
 
-# Sample usage
 library = Library("Central Library")
 
 book1 = Book("1984", "George Orwell")
@@ -73,7 +70,7 @@ library.add_book(book3)
 library.display_books()
 
 library.borrow_book("1984")
-library.borrow_book("1984")  # Already borrowed
+library.borrow_book("1984")  
 library.return_book("1984")
 library.remove_book("1984")
 library.display_books()

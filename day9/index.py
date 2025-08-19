@@ -1,15 +1,13 @@
 import time
 
-# === Closure Example ===
 def multiplier(factor):
     def multiply(number):
         return number * factor
     return multiply
 
-double = multiplier(2)  # This is a closure
-print("Closure example - double(5):", double(5))  # Output: 10
+double = multiplier(2)  
+print("Closure example - double(5):", double(5))  
 
-# === Decorator to Measure Execution Time ===
 def timer_decorator(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
@@ -20,7 +18,6 @@ def timer_decorator(func):
         return result
     return wrapper
 
-# === Custom Decorator to Log Function Calls ===
 def logger_decorator(func):
     def wrapper(*args, **kwargs):
         print(f"Calling function '{func.__name__}' with args: {args}, kwargs: {kwargs}")
@@ -29,21 +26,19 @@ def logger_decorator(func):
         return result
     return wrapper
 
-# === Sample Function Using Multiple Decorators ===
 @timer_decorator
 @logger_decorator
 def compute_sum(n):
     """Function to compute sum from 1 to n"""
-    time.sleep(1)  # simulate delay
+    time.sleep(1)  
     return sum(range(1, n+1))
 
-# === Context Manager Example ===
 def write_to_file(filename, content):
     """Context manager to write to a file safely"""
-    with open(filename, 'w') as file:  # file is automatically closed after the block
+    with open(filename, 'w') as file:  
         file.write(content)
 
-# === Main Execution ===
+
 if __name__ == "__main__":
     result = compute_sum(100000)
 
